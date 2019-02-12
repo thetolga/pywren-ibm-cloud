@@ -39,7 +39,7 @@ def create_zip_action(pywren_location=None):
     except Exception as e:
         print(e)
     if res != 0:
-        sys.exit()
+        exit()
     os.remove(prefix + '/pywren/__main__.py')
 
 
