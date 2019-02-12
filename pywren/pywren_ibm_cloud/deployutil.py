@@ -15,7 +15,7 @@
 #
 
 import os
-import site
+from site import exit
 from shutil import copyfile
 from pywren_ibm_cloud import wrenconfig
 from pywren_ibm_cloud.storage import storage
