@@ -15,6 +15,7 @@
 #
 
 import os
+from sys import argv,exit
 from shutil import copyfile
 from pywren_ibm_cloud import wrenconfig
 from pywren_ibm_cloud.storage import storage
@@ -38,7 +39,10 @@ def create_zip_action(pywren_location=None):
     except Exception as e:
         print(e)
     if res != 0:
-        sys.exit()
+        try:
+            sys.exit()
+        except:
+            exit()
     os.remove(prefix + '/pywren/__main__.py')
 
 
